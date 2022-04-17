@@ -1,3 +1,4 @@
+// Copyright 2022 LepehinM
 #include <iostream>
 #include "Automata.h"
 using std::string;
@@ -20,4 +21,3 @@ int main() {
     fastdrink.off();
     return EXIT_SUCCESS;
 }
-    

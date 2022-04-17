@@ -1,3 +1,4 @@
+// Copyright 2022 LepehinM
 #include "Automata.h"
 
 using std::string;
