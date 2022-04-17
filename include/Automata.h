@@ -7,6 +7,7 @@ using std::string;
 enum STATES {
     on,
     off,
+    wait,
     coin,
     etMenu,
     getStates,
