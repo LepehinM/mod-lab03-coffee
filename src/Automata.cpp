@@ -29,19 +29,9 @@ void Automata::coin(int money) {
     }
 }
 
-bool Automata::check(int index) {
-    if (state == check) {
-        if (cash >= prices[index]) {
-            return true;
-        }
-    }
-    return false;
-}
-
 vector<string> Automata::getMenu() {
     return menu;
 }
-
 States Automata::getState() {
     return state;
 }
@@ -57,6 +47,15 @@ int Automata::choice(string drink) {
         }
     }
     return index;
+}
+
+bool Automata::check(int index) {
+    if (state == check) {
+        if (cash >= prices[index]) {
+            return true;
+        }
+    }
+    return false;
 }
 
 void Automata::cook(int index) {
