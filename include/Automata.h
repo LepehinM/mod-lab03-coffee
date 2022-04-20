@@ -19,7 +19,7 @@ enum STATES {
 };
 
 class Automata {
-      public:
+       public:
        int cash;
        STATES state;
        const vector<string> menu = { "coffee", "tea", "cocoa"};
