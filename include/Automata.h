@@ -5,11 +5,11 @@
 using std::vector;
 using std::string;
 enum STATES {
-    off,
-    wait,
-    accept,
-    check,
-    cook,
+    Off,
+    Wait,
+    Accept,
+    Check,
+    Cook,
 };
 
 class Automata {
