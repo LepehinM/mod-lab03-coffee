@@ -24,7 +24,7 @@ void Automata::coin(int money) {
     if (state == Wait) {
         state = Accept;
     }
-    if (state == accept) {
+    if (state == Accept) {
         cash += money;
     }
 }
