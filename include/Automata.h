@@ -7,7 +7,7 @@ using std::string;
 enum STATES {
     off,
     wait,
-	accept,
+    accept,
     check,
     cook,
 };

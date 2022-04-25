@@ -32,7 +32,7 @@ void Automata::coin(int money) {
 vector<string> Automata::getMenu() {
     return menu;
 }
-States Automata::getState() {
+STATES Automata::getStates() {
     return state;
 }
 
