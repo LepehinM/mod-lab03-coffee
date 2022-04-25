@@ -2,7 +2,7 @@
 #include <iostream>
 #include "Automata.h"
 using std::string;
-using std:cout;
+using std::cout;
 int main() {
     Automata fastdrink;
     fastdrink.on();
