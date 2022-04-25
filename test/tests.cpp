@@ -6,7 +6,7 @@
 TEST(taskA, test1) {
   Automata Machine = Automata();
   Machine.on();
-  States res = Machine.getState();
+  STATES res = Machine.getState();
   EXPECT_EQ(Wait, res);
 }
 
@@ -40,6 +40,6 @@ TEST(taskA, test5) {
   Automata Machine = Automata();
   Machine.on();
   Machine.off();
-  States res = Machine.getState();
+  STATES res = Machine.getState();
   EXPECT_EQ(Off, res);
 }
