@@ -5,24 +5,24 @@ using std::string;
 
 Automata::Automata() {
     cash = 0;
-    state = off;
+    state = Off;
 }
 
 void Automata::on() {
-    if (state == off) {
-        state = wait;
+    if (state == Off) {
+        state = Wait;
     }
 }
 
 void Automata::off() {
-    if (state == wait) {
-        state = off;
+    if (state == Wait) {
+        state = Off;
     }
 }
 
 void Automata::coin(int money) {
-    if (state == wait) {
-        state = accept;
+    if (state == Wait) {
+        state = Accept;
     }
     if (state == accept) {
         cash += money;
@@ -40,8 +40,8 @@ int Automata::choice(string drink) {
     int index = -1;
     for (int i = 0; i < menu.size(); i++) {
         if (drink == menu[i]) {
-            if (state == accept) {
-                state = check;
+            if (state == Accept) {
+                state = Check;
                 index = i;
             }
         }
@@ -50,7 +50,7 @@ int Automata::choice(string drink) {
 }
 
 bool Automata::check(int index) {
-    if (state == check) {
+    if (state == Check) {
         if (cash >= prices[index]) {
             return true;
         }
@@ -59,18 +59,18 @@ bool Automata::check(int index) {
 }
 
 void Automata::cook(int index) {
-    if (state == check) {
-        state = cook;
+    if (state == Check) {
+        state = Cook;
         cash -= prices[index];
     }
 }
 
 int Automata::cancel() {
     int change = 0;
-    if (state == accept || state == check) {
+    if (state == Accept || state == Check) {
         change = cash;
         cash = 0;
-        state = wait;
+        state = Wait;
     }
     return change;
 }
@@ -79,8 +79,8 @@ int Automata::cancel() {
 
 int Automata::finish() {
     int change = 0;
-    if (state == cook) {
-        state = wait;
+    if (state == Cook) {
+        state = Wait;
         change = cash;
         cash = 0;
     }
